@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,11 +11,14 @@ public class playerController : MonoBehaviour
 
     Animator anim;
 
+    [SerializeField]
+    int playerMoney;
+
     void Start()
     {
         anim = GetComponent<Animator>();
-
         anim.Play("Idle");
+        playerMoney = 0;
     }
 
 
@@ -42,6 +46,13 @@ public class playerController : MonoBehaviour
         {
             anim.Play("WalkRight");
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        moneyGenerator generator = collision.gameObject.GetComponent<moneyGenerator>();
+        playerMoney += generator.money;
+        generator.money = 0;
     }
 
 

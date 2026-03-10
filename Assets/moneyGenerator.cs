@@ -21,7 +21,7 @@ float TimeSinceLastMoney = 0;
         TimeSinceLastMoney += Time.deltaTime;
         if(TimeSinceLastMoney >= timeBetweenMoney)
         {
-            money ++;
+            money += 5 * bonus;
             TimeSinceLastMoney = 0;
         }
     }
