@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     Animator anim;
 
     [SerializeField]
-    int playerMoney;
+    public int playerMoney;
 
     void Start()
     {
