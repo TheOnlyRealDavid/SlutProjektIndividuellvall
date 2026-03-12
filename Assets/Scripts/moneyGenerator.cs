@@ -5,7 +5,7 @@ public class moneyGenerator : MonoBehaviour
 
     [SerializeField]
    public int money = 0;
-   public int bonus = 1;
+   public int bonus = 0;
 
 float TimeSinceLastMoney = 0;
 [SerializeField]
