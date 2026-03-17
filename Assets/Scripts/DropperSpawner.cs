@@ -16,7 +16,7 @@ public class DropperSpawner : MonoBehaviour
 
                 if(player.playerMoney >= dropperPrice)
                 {
-                    Instantiate(DropperPrefab, transform.position, Quaternion.identity); //spawnar droppern på samma plats som SpawnerSpriten
+                    Instantiate(DropperPrefab, transform.position + Vector3.up * 0.3f, Quaternion.identity); //spawnar droppern på lite över SpawnerSpritens plats
 
                     player.playerMoney -= dropperPrice;
 

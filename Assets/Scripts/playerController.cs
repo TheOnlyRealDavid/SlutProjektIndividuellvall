@@ -18,7 +18,7 @@ public class playerController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         anim.Play("Idle");
-        playerMoney = 0;
+        // playerMoney = 0;
     }
 
 
