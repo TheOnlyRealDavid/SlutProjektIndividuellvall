@@ -28,4 +28,8 @@ public class DropperSpawner : MonoBehaviour
                 
         }
     }
+    public static int GetPrice() //En metod där jag hämtar dropperPriset som jag sedan anropar i DropperPriceText scriptet för att se hur myclet det kostar
+    {
+        return dropperPrice;
+    }
 }
